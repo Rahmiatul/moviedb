@@ -80,7 +80,7 @@
             <input type="checkbox"
                    class="form-check-input"
                    id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Ingat saya di hutan ini 🌿</label>
+            <label class="form-check-label" for="exampleCheck1">check me out 🌿</label>
         </div>
 
         <button type="submit" class="btn btn-primary w-100">Masuk</button>

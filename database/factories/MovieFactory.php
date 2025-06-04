@@ -18,14 +18,13 @@ class MovieFactory extends Factory
      */
     public function definition(): array
     {
-        $title = fake()->sentence(rand(3, 6));
+        $title = fake()->sentence(rand(3,6));
         $slug = Str::slug($title);
-
         return [
             'title' => $title,
             'slug' => $slug,
-            'synopsis' => fake()->paragraphs(rand(2, 4), true),
-            'category_id' => Category::inRandomOrder()->first()?->id ?? Category::factory(), // fallback ke factory
+            'synopsis' => fake()->paragraph(rand(5, 10)),
+            'category_id' => Category::inRandomOrder()->first(),
             'year' => fake()->year(),
             'actors' => fake()->name() . ', ' . fake()->name() . ', ' . fake()->name(),
             'cover_image' => 'https://picsum.photos/seed/' . Str::random(10) . '/480/640',
